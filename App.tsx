@@ -13,9 +13,9 @@ export default function App() {
         end={{ x: 1, y: 1 }}
         style={styles.background}
       />
-      <FormInput />
-      <FormInput />
-      <FormInput />
+      <FormInput label='Nome' placeholder='Insira seu nome' />
+      <FormInput label='E-mail' placeholder='Insira seu email' type='email-address' />
+      <FormInput label='Cidade' placeholder='Insira sua cidade' type='numeric' />
     </View>
   );
 }
