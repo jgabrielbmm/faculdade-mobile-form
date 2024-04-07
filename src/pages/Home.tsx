@@ -1,12 +1,10 @@
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from "react-native";
 import BackGround from "../components/back-ground";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { HomeScreenNavigationProp } from "../@types/pages";
 
-export function Home({ navigation }) {
-
-
+export function Home() {
+  const navigation = useNavigation<HomeScreenNavigationProp>();
   return (
     <View style={styles.container}>
       <BackGround />
