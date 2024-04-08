@@ -18,7 +18,7 @@ export function SelectInput({ data, onSelect }: SelectInputProps) {
   const handleSelect = (item: DataItem) => {
     setSelected(item.value);
     setVisible(false);
-    if (onSelect) onSelect(item.id);
+    if (onSelect) onSelect(item.value);
   };
 
   return (

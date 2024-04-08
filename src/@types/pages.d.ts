@@ -4,7 +4,13 @@ import { RouteProp } from '@react-navigation/native';
 type RootStackParamList = {
   Home: undefined;
   Form: undefined; 
+  Confirmation: {name: string, race: string}; 
 };
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
-type DetailsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Form'>;
+type FormScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Form'>;
+type ConfirmationScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Confirmation'>;
+
+interface ConfirmationScreenProps {
+  route: ConfirmationScreenNavigationProp;
+}

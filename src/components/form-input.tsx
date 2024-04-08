@@ -4,13 +4,17 @@ interface FormInputProps {
   label: string
   placeholder: string
   type?: 'default' | 'numeric' | 'email-address'
+  onChangeInput?: (...data: any[]) => void
+  value: string
 }
 
-export function FormInput({ label, placeholder, type = 'default' }: FormInputProps) {
+export function FormInput({ label, placeholder, onChangeInput, value, type = 'default' }: FormInputProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <TextInput
+        onChangeText={onChangeInput}
+        value={value}
         style={styles.input}
         placeholder={placeholder}
         keyboardType={type}
